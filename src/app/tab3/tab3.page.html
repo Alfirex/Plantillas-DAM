@@ -1,0 +1,62 @@
+
+
+<ion-header >
+  <!--<ion-nav color="&#45;&#45;ion-color-danger-shade">-->
+  <ion-toolbar>
+    <ion-title color="--ion-color-danger-shade">
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+  <!--</ion-nav>-->
+
+
+</ion-header>
+  <!-- end of ionic header bar -->
+
+<ion-content>
+  <!-- Cabecera Perfil-->
+  <section>
+    <img  width="100%" height="150px" src="/assets/shapes.svg" style="z-index:2;">
+    <!-- Imagen de Perfil -->
+    <div  style="text-align: center; position: relative; top:-90px">
+      <img src="https://www.bufetecastellanos.com/img/avatar%20bufete%20castellanos%20defi-02.jpg" style=" width:150px; height: 150px;  border-radius: 100%; position: relative;"/>
+    </div>
+    <div  style="float: right;  position: relative;">
+      <button ion-button class="btn-default" style="margin-top: -590px; margin-right: 5px; "><ion-icon name="create"></ion-icon>Editar Perfil</button>
+    </div>
+
+    <article style="text-align: center; margin-top: -90px">
+      <p>Anastasia</p>
+      <p>Carrasco <strong>Capi</strong></p>
+      <p style="margin-left: 125px">Hitler</p>
+    </article>
+  </section>
+
+  <!-- presentacion -->
+  <ion-card >
+    <ion-card-header>
+      <ion-card-title>Presentacion</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Hola Soy Anastasia y me gustan los Nepes y adoro a las hordas Nazis </p>
+    </ion-card-content>
+  </ion-card>
+  <hr>
+
+  <!--Acordeon-->
+  <ion-card class="acordeon">
+    <ion-card-header (click)="toogleAccording('estudios')"> Estudios</ion-card-header>
+    <ion-card-content #ccc>
+      Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do
+      Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos doLorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="acordeon">
+    <ion-card-header (click)="toogleAccording('apuntes')"> Apuntes</ion-card-header>
+    <ion-card-content #bbb>
+      Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do
+      Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos doLorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

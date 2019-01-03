@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Clases Particulares
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list >
+    <!-- For para que genere etiqeutas-->
+    <ion-item  style=" margin: 5px;
+                       -webkit-box-shadow: 14px 7px 36px -6px rgba(0,0,0,0.66);
+                       -moz-box-shadow: 14px 7px 36px -6px rgba(0,0,0,0.66);
+                       box-shadow: 14px 7px 36px -6px rgba(0,0,0,0.66);"
+               *ngFor="let item of items">
+
+      <div (click)="expandedItem(item)" style="width:100%; position: absolute; top: -5px;">
+        <div style="float: left; width: 20%">
+          <ion-thumbnail item-start>
+            <img width="200" height="300" src="https://via.placeholder.com/150">
+          </ion-thumbnail>
+        </div>
+
+        <div style=" width: 80%">
+          <p >{{ item.title}}</p>
+
+        </div>
+      </div>
+
+
+    </ion-item>
+
+  </ion-list>
+</ion-content>
