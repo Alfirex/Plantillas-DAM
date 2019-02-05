@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tab4',
-  templateUrl: './tab4.page.html',
-  styleUrls: ['./tab4.page.scss'],
+  selector: 'venta',
+  templateUrl: './venta-page.component.html',
+  styleUrls: ['./venta-page.component.scss'],
 })
-export class Tab4Page implements OnInit {
+export class VentaPage implements OnInit {
 
     items: any = [];
     itemExpandedHeight = 200;

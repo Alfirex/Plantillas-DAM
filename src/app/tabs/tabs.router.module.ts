@@ -13,56 +13,28 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../home/home.module#HomePageModule'
           }
         ]
       },
-      {
-        path: 'menu',
-        children: [
-          {
-            path: '',
-            loadChildren: '../menu/menu.module#MenuPageModule',
-          }
-        ]
-      },
-        {
-            path: 'menu-todos',
-            children: [
-                {
-                    path: '',
-                    loadChildren: '../menu/menu.module#MenuPageModule',
-                    redirectTo: '/tabs/menu/material/(menucontent:todos)'
-                }
-            ]
-        },
       {
         path: 'perfil',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../perfil/perfil.module#PerfilPageModule'
           }
         ]
       },
       {
-          path: 'clases',
+          path: 'ventas',
           children: [
               {
                   path: '',
-                  loadChildren: '../tab4/tab4.module#Tab4PageModule'
+                  loadChildren: '../venta/venta.module#VentaPageModule'
               }
           ]
       },
-        {
-            path: 'tab3/tab3-edit-user',
-            children: [
-                {
-                    path: '',
-                    loadChildren: '../tab3-edit-user/tab3-edit-user.module#Tab3EditUserPageModule'
-                }
-            ]
-        },
       {
         path: '',
         redirectTo: '/tabs/home',

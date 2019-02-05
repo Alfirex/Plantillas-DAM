@@ -1,11 +1,11 @@
 import {Component, ViewChild, OnInit, Renderer, ElementRef} from '@angular/core';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'app-perfil-page',
+  templateUrl: 'perfil-page.component.html',
+  styleUrls: ['perfil-page.component.scss']
 })
-export class Tab3Page implements OnInit {
+export class PerfilPage implements OnInit {
 
     public accordingExapandedeEST = false;
     public accordingExapandedeAPU = false;
