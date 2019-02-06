@@ -9,3 +9,39 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+h1{
+  color: #555555;
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+h2{
+  color: #555555;
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: lighter;
+  margin-left: 15px;
+}
+h3{
+  color: #555555;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+h4{
+  color: #555555;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+p{
+  color: #555555;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1;
+}
