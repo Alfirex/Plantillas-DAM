@@ -10,77 +10,79 @@
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#apuntes">Apuntes</a></li>
     <li><a data-toggle="tab" href="#libro">Libro</a></li>
-
   </ul>
 
   <div class="tab-content">
     <div id="apuntes" class="tab-pane fade in active">
       <h3>Añadir Apuntes</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <!-- Story line -->
+        <form #formContacto="ngForm" (ngSubmit)="onSubmitApuntes()">
+            <!-- Story line -->
+            <ion-item>
+                <ion-label for="nombre">Nombre<br/></ion-label>
+                <ion-input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="oApuntes.nombre"> </ion-input><br>
+            </ion-item>
+
+            <label for="autor">Autor</label><br>
+            <input type="text" name="autor" #autor="ngModel" [(ngModel)]="oApuntes.autor"><br>
+
+            <label for="temas">Temas</label><br>
+            <input type="text" name="temas" #temas="ngModel" [(ngModel)]="oApuntes.temas"><br>
+
+            <label for="verificado">Verificado</label><br>
+            <input type="text" name="verificado" #verificado="ngModel" [(ngModel)]="oApuntes.verificado"><br>
+
+            <label for="asignatura">Asignatura</label><br>
+            <input type="text" name="asignatura" #asignatura="ngModel" [(ngModel)]="oApuntes.asignatura"><br>
+
+            <label for="descripcion">Descripción</label><br>
+            <textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="oApuntes.descripcion"></textarea><br>
+
+            <label for="precio">Precio</label><br>
+            <input type="text" name="precio" #precio="ngModel" [(ngModel)]="oApuntes.precio">€<br>
+
+            <input type="hidden" name="idlibro" #idlibro="ngModel" [(ngModel)]="oApuntes.idapuntes" value=""><br>
+
+            <input type="submit" value="Enviar">
+        </form>
 
 
-
-      <hr no-margin no-padding>
-
-
-        <!-- Cards -->
-        <ion-card no-padding padding-bottom no-margin class="card">
-
-          <ion-row>
-            <ion-col col-10>
-              <ion-item>
-                <ion-avatar item-left>
-                  <img src="http://ionicframework.com/dist/preview-app/www/assets/img/sarah-avatar.png.jpeg">
-                </ion-avatar>
-                <h2 style="font-weight: bold">ashleyosama</h2>
-                <p>Cyprus</p>
-
-              </ion-item>
-            </ion-col >
-            <ion-col col-2>
-              <button no-margin no-padding clear color="black" ion-button icon-only style="float: right; top: 15px" >
-                <ion-icon name="more"></ion-icon>
-              </button>
-            </ion-col>
-          </ion-row>
-
-
-          <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-bttf.png" >
-
-          <p no-margin no-padding>
-            <button clear ion-button icon-only class="like-btn">
-              <ion-icon no-padding  class="icon-space"></ion-icon>
-            </button>
-            <button clear ion-button icon-only>
-              <ion-icon no-padding isActive="false" color="black" name="ios-text-outline" class="icon-space" style="font-weight: bold"></ion-icon>
-            </button>
-            <button clear ion-button icon-only>
-              <ion-icon no-padding isActive="false" color="black" name="paper-plane" class="icon-space"></ion-icon>
-            </button>
-            <button no-margin no-padding clear color="black" ion-button icon-only style="float: right">
-              <ion-icon name="ios-bookmark-outline"></ion-icon>
-            </button>
-          </p>
-          <hr>
-
-          <ion-card-content>
-            <p class="like-content"><ion-icon name="heart"></ion-icon> 250 likes</p>
-            <p><b>techcrunch</b> Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-
-            <ion-note style="font-size: 12px">
-              11h ago
-            </ion-note>
-          </ion-card-content>
-
-        </ion-card>
-
-      </div>
     </div>
+
     <div id="libro" class="tab-pane fade">
-      <h3>Añadir Lbro</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h3>Añadir Libro</h3>
+
+      <form #formContacto="ngForm" (ngSubmit)="onSubmitLibro()">
+        <label for="nombre">Nombre</label><br>
+        <!--Le damos con # para decir el nombre que tendrá y añadimos ngModel, para poder identificarlo en angular Y cambiar el valor de forma asíncrona-->
+        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="oLibro.nombre"><br>
+
+        <label for="estado">Estados</label><br>
+        <input type="text" name="estado" #estado="ngModel" [(ngModel)]="oLibro.estado"><br>
+
+        <label for="editorial">Editorial</label><br>
+        <input type="text" name="editorial" #editorial="ngModel" [(ngModel)]="oLibro.editorial"><br>
+
+        <label for="vendedor">Vendedor</label><br>
+        <input type="text" name="vendedor" #vendedor="ngModel" [(ngModel)]="oLibro.vendedor"><br>
+
+        <label for="isbn">ISBN</label><br>
+        <input type="text" name="isbn" #isbn="ngModel" [(ngModel)]="oLibro.isbn"><br>
+
+        <label for="descripcion">Descripcion</label><br>
+        <textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="oLibro.descripcion"></textarea><br>
+
+        <label for="asignatura">Asignatura</label><br>
+        <input type="text" name="asignatura" #asignatura="ngModel" [(ngModel)]="oLibro.asignatura"><br>
+
+        <label for="idLibro">ID_Libro</label><br>
+        <input type="text" name="idLibro" #idLibro="ngModel" [(ngModel)]="oLibro.idLibro"><br>
+
+        <label for="Precio">Precio</label><br>
+        <input type="text" name="precio" #precio="ngModel" [(ngModel)]="oLibro.precio"><br>
+
+        <input type="submit" value="Enviar">
+      </form>
     </div>
 
-
+  </div>
 </ion-content>
