@@ -11,38 +11,52 @@
     <li class="active"><a data-toggle="tab" href="#apuntes">Apuntes</a></li>
     <li><a data-toggle="tab" href="#libro">Libro</a></li>
   </ul>
-
-  <div class="tab-content">
+   <div class="tab-content">
     <div id="apuntes" class="tab-pane fade in active">
       <h3>Añadir Apuntes</h3>
         <form #formContacto="ngForm" (ngSubmit)="onSubmitApuntes()">
-            <!-- Story line -->
-            <ion-item>
-                <ion-label for="nombre">Nombre<br/></ion-label>
-                <ion-input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="oApuntes.nombre"> </ion-input><br>
-            </ion-item>
 
-            <label for="autor">Autor</label><br>
-            <input type="text" name="autor" #autor="ngModel" [(ngModel)]="oApuntes.autor"><br>
+            <ion-list>
+                <ion-item>
+                    <ion-label position="floating">Nombre</ion-label>
+                    <ion-input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="oApuntes.nombre" ></ion-input>
+                </ion-item>
 
-            <label for="temas">Temas</label><br>
-            <input type="text" name="temas" #temas="ngModel" [(ngModel)]="oApuntes.temas"><br>
+                <ion-item>
+                    <ion-label position="floating">Autor</ion-label>
+                    <ion-input type="text" name="autor" #autor="ngModel" [(ngModel)]="oApuntes.autor" ></ion-input>
+                </ion-item>
 
-            <label for="verificado">Verificado</label><br>
-            <input type="text" name="verificado" #verificado="ngModel" [(ngModel)]="oApuntes.verificado"><br>
+                <ion-item>
+                    <ion-label position="floating">Temas</ion-label>
+                    <ion-input type="text" name="temas" #temas="ngModel" [(ngModel)]="oApuntes.temas" ></ion-input>
+                </ion-item>
 
-            <label for="asignatura">Asignatura</label><br>
-            <input type="text" name="asignatura" #asignatura="ngModel" [(ngModel)]="oApuntes.asignatura"><br>
+                <ion-item>
+                    <ion-label position="floating">Verificado</ion-label>
+                    <ion-input type="text" name="verificado" #verificado="ngModel" [(ngModel)]="oApuntes.verificado" ></ion-input>
+                </ion-item>
 
-            <label for="descripcion">Descripción</label><br>
-            <textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="oApuntes.descripcion"></textarea><br>
+                <ion-item>
+                    <ion-label position="floating">Asignatura</ion-label>
+                    <ion-input type="text" name="asignatura" #asignatura="ngModel" [(ngModel)]="oApuntes.asignatura" ></ion-input>
+                </ion-item>
 
-            <label for="precio">Precio</label><br>
-            <input type="text" name="precio" #precio="ngModel" [(ngModel)]="oApuntes.precio">€<br>
+                <ion-item>
+                    <ion-label position="floating">Description</ion-label>
+                    <ion-textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="oApuntes.descripcion"></ion-textarea>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label position="floating">Precio</ion-label>
+                    <ion-input type="number" name="precio" #precio="ngModel" [(ngModel)]="oApuntes.precio" ></ion-input>
+                </ion-item>
+            </ion-list>
 
             <input type="hidden" name="idlibro" #idlibro="ngModel" [(ngModel)]="oApuntes.idapuntes" value=""><br>
 
-            <input type="submit" value="Enviar">
+            <ion-button type="submit" color="primary">Enviar </ion-button>
+
         </form>
 
 
@@ -52,35 +66,57 @@
       <h3>Añadir Libro</h3>
 
       <form #formContacto="ngForm" (ngSubmit)="onSubmitLibro()">
-        <label for="nombre">Nombre</label><br>
-        <!--Le damos con # para decir el nombre que tendrá y añadimos ngModel, para poder identificarlo en angular Y cambiar el valor de forma asíncrona-->
-        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="oLibro.nombre"><br>
 
-        <label for="estado">Estados</label><br>
-        <input type="text" name="estado" #estado="ngModel" [(ngModel)]="oLibro.estado"><br>
 
-        <label for="editorial">Editorial</label><br>
-        <input type="text" name="editorial" #editorial="ngModel" [(ngModel)]="oLibro.editorial"><br>
+          <ion-list>
+              <ion-item>
+                  <ion-label position="floating">Nombre</ion-label>
+                  <ion-input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="oLibro.nombre" ></ion-input>
+              </ion-item>
 
-        <label for="vendedor">Vendedor</label><br>
-        <input type="text" name="vendedor" #vendedor="ngModel" [(ngModel)]="oLibro.vendedor"><br>
+              <ion-item>
+                  <ion-label position="floating">Estados</ion-label>
+                  <ion-input type="text" name="estado" #estado="ngModel" [(ngModel)]="oLibro.estado" ></ion-input>
+              </ion-item>
 
-        <label for="isbn">ISBN</label><br>
-        <input type="text" name="isbn" #isbn="ngModel" [(ngModel)]="oLibro.isbn"><br>
+              <ion-item>
+                  <ion-label position="floating">Editorial</ion-label>
+                  <ion-input type="text" name="editorial" #editorial="ngModel" [(ngModel)]="oLibro.editorial" ></ion-input>
+              </ion-item>
 
-        <label for="descripcion">Descripcion</label><br>
-        <textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="oLibro.descripcion"></textarea><br>
+              <ion-item>
+                  <ion-label position="floating">Vendedor</ion-label>
+                  <ion-input type="text" name="vendedor" #vendedor="ngModel" [(ngModel)]="oLibro.vendedor" ></ion-input>
+              </ion-item>
 
-        <label for="asignatura">Asignatura</label><br>
-        <input type="text" name="asignatura" #asignatura="ngModel" [(ngModel)]="oLibro.asignatura"><br>
+              <ion-item>
+                  <ion-label position="floating">ISBN</ion-label>
+                  <ion-input type="text" name="isbn" #isbn="ngModel" [(ngModel)]="oLibro.isbn"></ion-input>
+              </ion-item>
 
-        <label for="idLibro">ID_Libro</label><br>
-        <input type="text" name="idLibro" #idLibro="ngModel" [(ngModel)]="oLibro.idLibro"><br>
+              <ion-item>
+                  <ion-label position="floating">Description</ion-label>
+                  <ion-textarea name="descripcion" #descripcion="ngModel" [(ngModel)]="oLibro.descripcion"></ion-textarea>
+              </ion-item>
 
-        <label for="Precio">Precio</label><br>
-        <input type="text" name="precio" #precio="ngModel" [(ngModel)]="oLibro.precio"><br>
+              <ion-item>
+                  <ion-label position="floating">Asignatura</ion-label>
+                  <ion-input type="text" name="asignatura" #asignatura="ngModel" [(ngModel)]="oLibro.asignatura" ></ion-input>
+              </ion-item>
 
-        <input type="submit" value="Enviar">
+              <ion-item>
+                  <ion-label position="floating">Precio</ion-label>
+                  <ion-input type="number" name="precio" #precio="ngModel" [(ngModel)]="oLibro.precio"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label position="floating">ID_Libro</ion-label>
+                  <ion-input type="text" name="idLibro" #idLibro="ngModel" [(ngModel)]="oLibro.idLibro"></ion-input>
+              </ion-item>
+
+          </ion-list>
+
+          <ion-button type="submit" color="primary">Enviar </ion-button>
       </form>
     </div>
 

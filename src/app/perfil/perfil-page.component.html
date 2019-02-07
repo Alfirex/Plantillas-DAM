@@ -15,48 +15,54 @@
 
 <ion-content>
   <!-- Cabecera Perfil-->
-  <section>
-    <img  width="100%" height="150px" src="/assets/shapes.svg" style="z-index:2;">
-    <!-- Imagen de Perfil -->
-    <div  style="text-align: center; position: relative; top:-90px">
-      <img src="https://www.bufetecastellanos.com/img/avatar%20bufete%20castellanos%20defi-02.jpg" style=" width:150px; height: 150px;  border-radius: 100%; position: relative;"/>
+    <div class="card hovercard">
+      <div class="card-background">
+        <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
+        <!-- http://lorempixel.com/850/280/people/9/ -->
+      </div>
+      <div class="useravatar">
+        <img alt="" src="http://lorempixel.com/100/100/people/9/">
+      </div>
+      <div class="card-info"> <span class="card-title">Pamela Anderson</span></div>
     </div>
-    <div  style="float: right;  position: relative;">
-      <button ion-button class="btn-default" style="margin-top: -590px; margin-right: 5px; "><ion-icon name="create"></ion-icon>Editar Perfil</button>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" id="stars" class="btn btn-primary" href="#tab-perfil-1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <div class="hidden-xs">Stars</div>
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="favorites" class="btn btn-default" href="#tab-perfil-2" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+          <div class="hidden-xs">Favorites</div>
+        </button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="following" class="btn btn-default" href="#tab-perfil-3" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+          <div class="hidden-xs">Following</div>
+        </button>
+      </div>
     </div>
 
-    <article style="text-align: center; margin-top: -90px">
-      <p>Anastasia</p>
-      <p>Carrasco <strong>Capi</strong></p>
-      <p style="margin-left: 125px">Hitler</p>
-    </article>
-  </section>
 
-  <!-- presentacion -->
-  <ion-card >
-    <ion-card-header>
-      <ion-card-title>Presentacion</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Hola Soy Anastasia y me gustan los Nepes y adoro a las hordas Nazis </p>
-    </ion-card-content>
-  </ion-card>
-  <hr>
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="tab-perfil-1">
 
-  <!--Acordeon-->
-  <ion-card class="acordeon">
-    <ion-card-header (click)="toogleAccording('estudios')"> Estudios</ion-card-header>
-    <ion-card-content #ccc>
-      Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do
-      Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos doLorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do
-    </ion-card-content>
-  </ion-card>
-  <ion-card class="acordeon">
-    <ion-card-header (click)="toogleAccording('apuntes')"> Apuntes</ion-card-header>
-    <ion-card-content #bbb>
-      Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do
-      Lorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos doLorenasduhahiodsaiudi aqdaiod hasoi dhasois dhaoi sdaoid hao edao hdoa djao dao dao daoos do
-    </ion-card-content>
-  </ion-card>
+            <h3>Presentacion</h3>
+
+            <p>Hola Soy Anastasia y me gustan los Nepes y adoro a las hordas Nazis </p>
+
+        </div>
+        <div class="tab-pane fade in" id="tab-perfil-2">
+          <h3>Estudios</h3>
+
+          <p>Hola Soy Anastasia y me gustan los Nepes y adoro a las hordas Nazis </p>
+        </div>
+        <div class="tab-pane fade in" id="tab-perfil-3">
+          <h3>Apuntes</h3>
+
+          <p>Hola Soy Anastasia y me gustan los Nepes y adoro a las hordas Nazis </p>
+        </div>
+      </div>
+
 
 </ion-content>

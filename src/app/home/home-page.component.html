@@ -17,45 +17,41 @@
 <ion-content>
     <div class="contenido">
         <br>
-        form
+
         <h1 class="primero" font>Busca en :</h1>
   <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
     <div class="btn-group" role="group">
       <button type="button" id="stars" class="btn btn-selected" href="#tab1" data-toggle="tab" (click)="cambiar(1)"   ><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-        <div class="">Stars</div>
+        <div class="">Todos</div>
       </button>
     </div>
     <div class="btn-group" role="group">
       <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"(click)="cambiar(2)"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-        <div class="">Favorites</div>
+        <div class="">Apuntes</div>
       </button>
     </div>
     <div class="btn-group" role="group">
       <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"(click)="cambiar(3)"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-        <div class="">Following</div>
+        <div class="">Libros</div>
       </button>
     </div>
-      <div class="btn-group" role="group">
-          <button type="button" id="follsowing" class="btn btn-default" href="#tab3" data-toggle="tab"(click)="cambiar(3)"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-              <div class="">Following</div>
-          </button>
-      </div>
-  </div>
-    <ion-card class="welcome-card">
 
-        <ion-img src="/assets/shapes.svg"></ion-img>
-        <ion-card-header>
-            <ion-card-title>Bienvenido a UniversAPP</ion-card-title>
-            <ion-card-subtitle>Empezar</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-            <p>Ahora que a accedido , querrá comenzar a obtener conocimientos sobre los materiales que pueden ofrecer  los Ex-estudiantes o ofrecerte ellos mismos clases personales.</p>
-        </ion-card-content>
-    </ion-card>
+  </div>
+        <h3>Productos destacados</h3>
+    <mbsc-scrollview [options]="scrollViewOptions" class="demo-card">
+        <mbsc-scrollview-item mbsc-card *ngFor="let c of newGames">
+            <mbsc-card-content>
+                <img class="md-img" [src]="c.image" draggable="false">
+                <mbsc-card-title>{{c.title}}</mbsc-card-title>
+                <mbsc-card-subtitle>{{c.dev}}</mbsc-card-subtitle>
+                <div class="md-rank">{{c.rank}}<span class="mbsc-ic mbsc-ic-star3"></span></div>
+            </mbsc-card-content>
+        </mbsc-scrollview-item>
+    </mbsc-scrollview>
 
     <div class="tab-content">
       <div class="tab-pane fade in active" id="tab1">
-        <h3>This is tab 1</h3>
+        <h3>Ultimos Productos</h3>
 
           <section class="container-fluid">
 
@@ -283,48 +279,6 @@
       </div>
       <div class="tab-pane fade in" id="tab3">
         <h3>This is tab 3</h3>
-
-          <div class="md-cards">
-              <div class="md-card-cont">
-                  <h3>New & Updated Games</h3>
-                  <mbsc-scrollview [options]="scrollViewOptions" class="demo-card">
-                      <mbsc-scrollview-item mbsc-card *ngFor="let c of newGames">
-                          <mbsc-card-content>
-                              <img class="md-img" [src]="c.image" draggable="false">
-                              <mbsc-card-title>{{c.title}}</mbsc-card-title>
-                              <mbsc-card-subtitle>{{c.dev}}</mbsc-card-subtitle>
-                              <div class="md-rank">{{c.rank}}<span class="mbsc-ic mbsc-ic-star3"></span></div>
-                          </mbsc-card-content>
-                      </mbsc-scrollview-item>
-                  </mbsc-scrollview>
-
-                  <h3>Media & Video Apps</h3>
-                  <mbsc-scrollview [options]="scrollViewOptions" class="demo-card">
-                      <mbsc-scrollview-item mbsc-card *ngFor="let c of mediaVideo">
-                          <mbsc-card-content>
-                              <img class="md-img" [src]="c.image" draggable="false">
-                              <mbsc-card-title>{{c.title}}</mbsc-card-title>
-                              <mbsc-card-subtitle>{{c.dev}}</mbsc-card-subtitle>
-                              <div class="md-rank">{{c.rank}}<span class="mbsc-ic mbsc-ic-star3"></span></div>
-                          </mbsc-card-content>
-                      </mbsc-scrollview-item>
-                  </mbsc-scrollview>
-
-                  <h3>New & Updated Apps</h3>
-                  <mbsc-scrollview [options]="scrollViewOptions" class="demo-card">
-                      <mbsc-scrollview-item mbsc-card *ngFor="let c of newUpdated">
-                          <mbsc-card-content>
-                              <img class="md-img" [src]="c.image" draggable="false">
-                              <mbsc-card-title>{{c.title}}</mbsc-card-title>
-                              <mbsc-card-subtitle>{{c.dev}}</mbsc-card-subtitle>
-                              <div class="md-rank">{{c.rank}}<span class="mbsc-ic mbsc-ic-star3"></span></div>
-                          </mbsc-card-content>
-                      </mbsc-scrollview-item>
-                  </mbsc-scrollview>
-              </div>
-          </div>
-
-
 
 
       </div>
