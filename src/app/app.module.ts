@@ -12,15 +12,22 @@ import { AppComponent } from './app.component';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
+// Importar lo necesario para firebase:
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { RegistroComponent } from './registro/registro.component';
+import { firebaseConfig } from '../config';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RegistroComponent],
   entryComponents: [],
-  imports: [ 
-    FormsModule, 
+  imports: [
+    FormsModule,
+      AngularFireModule.initializeApp(firebaseConfig.fire),
+      AngularFirestoreModule,
     BrowserModule, IonicModule.forRoot(), AppRoutingModule,  MatButtonModule, MatCheckboxModule, NoopAnimationsModule],
   providers: [
     StatusBar,
